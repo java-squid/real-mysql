@@ -2,7 +2,7 @@
 
 ## 도서
 - [Real MySQL 8.0 1권](https://product.kyobobook.co.kr/detail/S000001766482)
-- [Real MySQL 8.0 2권](https://product.kyobobook.co.kr/detail/S000001766483)
+- [Real MySQL 8.0 2권](https://product.kyobobook.co.kr/detail/S000001766483)
 
 ## 목표
 - Real mysql 8.0 책을 읽는다.
