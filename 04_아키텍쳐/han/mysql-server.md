@@ -1,4 +1,5 @@
-## Structure
+![image](https://velog.velcdn.com/images%2Ffortice%2Fpost%2Fd869f1e2-246c-49cf-9315-a98b2156b17e%2Fimage.png)
+
 - [[mysql-engine]] + [[storage-engine]]
 - 스레드 기반 동작
 	- 스레드는 Foreground, Background로 구분됨
