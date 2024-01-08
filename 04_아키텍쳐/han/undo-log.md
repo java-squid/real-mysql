@@ -14,3 +14,8 @@
 - [[undo-log]] 가 지속적으로 증가하는 건, 좋지 않음
 - 왜?
 	- 트랜잭션이 장시간 유지되는 경우가 많다는 것, 메모리를 계속 잡고 있다는 것.
+
+--- 
+## Reference
+- [Real MySQL 8.0 (1권)](https://product.kyobobook.co.kr/detail/S000001766482)
+	- 4.2.9 언두 로그

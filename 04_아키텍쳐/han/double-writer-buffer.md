@@ -9,3 +9,8 @@
 
 - 데이터 안전성을 위해 
 	- 즉 데이터 무결성을 위해
+
+--- 
+## Reference
+- [Real MySQL 8.0 (1권)](https://product.kyobobook.co.kr/detail/S000001766482)
+	- 4.2.8 Double Write Buffer

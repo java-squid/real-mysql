@@ -6,3 +6,8 @@
 	- 반드시 중복 결과를 체크해야하므로.
 - [[innoDB-change-buffer]]에 임시 저장된 인덱스 레코드 조각은 [[background-thread]] 에 의해서 병합됨.
 	- 이를 `merge thread` 라 한다.
+
+--- 
+## Reference
+- [Real MySQL 8.0 (1권)](https://product.kyobobook.co.kr/detail/S000001766482)
+	- 4.2.10 체인지 버퍼
