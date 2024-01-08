@@ -8,3 +8,8 @@
 - join buffer
 - binary log cache
 - network buffer
+
+--- 
+## Reference
+- [Real MySQL 8.0 (1권)](https://product.kyobobook.co.kr/detail/S000001766482)
+	- 4.1.3.2 로컬 메모리 영역

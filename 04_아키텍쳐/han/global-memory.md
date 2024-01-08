@@ -6,3 +6,8 @@
 - InnoDB buffer pool
 - InnoDB adaptive hash index
 - InnoDB redo log buffer
+
+--- 
+## Reference
+- [Real MySQL 8.0 (1권)](https://product.kyobobook.co.kr/detail/S000001766482)
+	- 4.1.3.1 글로벌 메모리 영역
