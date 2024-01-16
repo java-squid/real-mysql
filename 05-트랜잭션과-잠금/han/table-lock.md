@@ -1,0 +1,18 @@
+- 개별 테이블 단위로 설정되는 [[lock]]
+- 명시적 혹은 묵시적으로 획득 가능
+- 명시적?
+	- `LOCK TABLES table_name [ READ | WRITE ]`
+	- `UNLOCK TABLES..`
+- [[myisam]] or [[innoDB]] 모두 사용 가능
+- 명시적인 상황이 아니면, 어플리케이션을 통해 사용하는 경우는 거의 없음
+	- 왜?
+	- [[global-lock]] 과 동일하게 상당한 영향을 미치기 때문
+- 묵시적?
+	- [[myisam]] 테이블에 데이터를 변경하는 쿼리 실행 시 발생.
+	- 데이터가 변경되는 테이블 잠금 -> 데이터 변경 -> 잠금 해제
+	- 반면 [[innoDB]] 의 경우 [[record]] 기반 [[lock]] 을 제공하기 때문에, 단순 데이터 변경으로 묵시적인 [[table-lock]] 이 설정되지 않음
+		- [[table-lock]] 이 설정되긴 하지만, [[DDL]] 의 경우 발생
+---
+## Reference
+ - - [Real MySQL 8.0 (1권)](https://product.kyobobook.co.kr/detail/S000001766482)
+	- 5.2.2 테이블 락
