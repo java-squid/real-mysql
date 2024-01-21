@@ -6,3 +6,8 @@
 > 참고
 - [[storage-engine]] 에 따라 하는 역할이 다르다.
 - `innodb` 의 경우, `foreground`, `background` 역할이 나눠져 있지만, `myisam` 의 경우 `foreground` 가 `background` 가 하는 일까지 처리하는듯
+
+--- 
+## Reference
+- [Real MySQL 8.0 (1권)](https://product.kyobobook.co.kr/detail/S000001766482)
+	- 4.1.2.1 포그라운드 스레드 (클라이언트 스레드)

@@ -19,6 +19,7 @@
 	- 디스크로부터 한번 읽어보 페이지를 최대한 오랫동안 버퍼풀 메모리에 유지하도록 하여, 디스크 읽기를 최소화하는 것
 
 ---
-
 ## Reference
+- [Real MySQL 8.0 (1권)](https://product.kyobobook.co.kr/detail/S000001766482)
+	- 4.2.7 InnoDB 버퍼 풀
 - https://dev.mysql.com/doc/refman/8.0/en/innodb-buffer-pool.html
