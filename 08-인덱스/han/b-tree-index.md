@@ -4,6 +4,7 @@
 - 칼럼 값을 변형하지 않고, 원래의 값을 이용해 인덱싱하는 알고리즘
 
 > B-tree 인덱스 구조
+
 ![image](https://junhyunny.github.io/images/db-index-data-structure-3.JPG)
 
 - 트리 구조
@@ -17,7 +18,7 @@
 - 레코드 주소는 INSERT 된 순번이거나 데이터 파일 내 위치(Offset)
 - 인덱스의 value 값은, 물리적인 주소를 가짐
 
->  B-Tree의 리프 노드와 테이블 데이터 레코드(InnoDB)
+>  B-Tree의 리프 노드와 테이블 데이터 레코드 [[innoDB]]
 
 ![image](https://oopy.lazyrockets.com/api/v2/notion/image?src=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Feb58a0f8-87b8-49ed-b582-565f421524c2%2FUntitled.png&blockId=f361b3ec-d16d-40dd-b4eb-944c0ef98833)
 
@@ -31,5 +32,6 @@
 	- 8.2 인덱스란?
 	- 8.3 B-Tree 인덱스
 	- 8.3.1 구조 및 특성
+	- 8.3.2 B-tree 인덱스 키 추가 및 삭제
 - https://junhyunny.github.io/information/data-structure/db-index-data-structure/
 - https://www.refinar.life/real-mysql/2
