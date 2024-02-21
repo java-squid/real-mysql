@@ -1,0 +1,12 @@
+- 인덱스 역순 스캔
+- 인덱스 키의 크고 작음에 관계없이 인덱스의 리프 노드의 오른쪽 페이지부터 왼쪽으로 스캔
+- [[backward-index-scan]] 은 [[forward-index-scan]] 보다 느릴 수 밖에 었음
+	- [[page]] 잠금이 [[forward-index-scan]] 에 더 적합함.
+		- 왜?
+		- [[forward-index-scan]] 의 경우 순차적으로 [[page]] 잠금, 해제 하기 때문에 [[page]]끼리 잠금경쟁 발생할 가능성 낮음
+		- [[backward-index-scan]] 의 경우, 역순으로 잠금하고 해제 하기 때문에 [[page]] 잠금 경쟁 가능성 높음
+	- [[page]] 내 인덱스 레코드가 단방향으로만 연결되었음
+---
+## Reference
+ -  [Real MySQL 8.0 (1권)](https://product.kyobobook.co.kr/detail/S000001766482)
+	- 8.3.6.1.2 내림차순 인덱스
