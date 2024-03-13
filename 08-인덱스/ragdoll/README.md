@@ -158,3 +158,76 @@
 
 - 키워드 검색을 위한 인덱싱 알고리즘
 - 몇 글자 단위로 잘라서 인덱싱
+
+### 멀티 밸류 인덱스
+
+- 원래 인덱스, 데이터는 1:1 관계
+- 8.x부터 인덱스, 데이터 N:1 관계가 가능하다.
+
+##### 검색 조건 함수
+
+- 멀티 밸류 인덱스는 다음의 함수를 사용 할 때만 동작한다.
+  - MEMBER OF()
+  - JSON_CONTAINS()
+  - JSON_OVERLAPS()
+
+### 함수 기반 인덱스
+
+- 함수에 의해 변형된 값의 인덱스를 생성하는 방법
+- 방법
+  - 가상 컬럼
+  - 함수
+- 동일하게 B-Tree를 사용한다.
+
+##### 가상 컬럼 방식
+
+- 컬럼을 생성하는 방식과 비슷
+- 테이블 구조 변경
+
+```sql
+ALTER TABLE example
+	ADD example_composite_column VARCHAR(30) AS (CONCAT(example_column_1, ' ', example_column_2)) VIRTUAL,
+	ADD INDEX `idx_example_composite_column` (example_composite_column)
+```
+
+##### 함수 방식
+
+- 테이블 구조 변경 X
+- DDL과 WHERE 조건이 같아야 인덱스가 작동한다.
+
+```sql
+-- DDL
+CREATE TABLE example (
+	-- ...
+	INDEX idx_example_composite_column ((CONCAT(example_column_1, ' ', example_column_2)))
+);
+
+-- USAGE
+SELECT * FROM example
+WHERE CONCAT(example_column_1, ' ', example_column_2) = 'example'
+```
+
+### 클러스터링 인덱스
+
+- PK가 비슷한 데이터끼리 모아서 저장
+- PK 값이 바뀌면 저장위치도 바뀌게 된다.
+- 리프노드에 레코드의 주소 값(ROW-ID)이 저장되는 세컨더리 인덱스와 다르게 리프노드에 레코드의 모든 값 저장
+  - InnoDB는 리프 노드에 프라이머리 인덱스를 저장하고 있다.
+
+##### 세컨더리 인덱스에 미치는 영향
+
+- 클러스터링 인덱스 구조에서는 PK 값이 변경되면 데이터의 물리적 주소가 변경된다.
+- 만약 리프노드에 특정 레코드의 주소 값(ROW-ID)를 저장한다면, PK가 변경되면 세컨더리 인덱스도 변경되어야 할 것이다.
+- 클러스터링 인덱스에 영향을 받지 않고 오버헤드를 방지하기 위해, 세컨더리 인덱스는 리프노드에 클러스터링 인덱스 값을 저장하고 있다.
+
+### 유니크 인덱스
+
+##### 인덱스 읽기
+
+- 유니크하지 않은 일반 인덱스와 큰 차이가 없다.
+  - 유니크하지 않은 인덱스는 중복을 허용하므로 조금 더 많은 레코드를 읽기는 할 것이다.
+
+#### 인덱스 쓰기
+
+- 데이터가 INSERT 될 때 마다 중복 값이 이미 있는지 체크해야 하므로 일반 인덱스보다 쓰기 성능이 느리다.
+- 읽기 잠금, 쓰기 잠금을 모두 사용하므로 데드락도 자주 발생한다.
