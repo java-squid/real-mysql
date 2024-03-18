@@ -1,5 +1,5 @@
-- 정렬을 처리하는 방법은 [[index]] 를 이용하는 방법과, 쿼리가 실행될 때 `Filesort` 라는 별도의 처리를 이용하는 방법
-
+- 정렬을 처리하는 방법은 [[index]] 를 이용하는 방법과, 쿼리가 실행될 때 [[filesort]] 라는 별도의 처리를 이용하는 방법으로 나뉨
+- [[filesort]] 는 [[sort-buffer]] 를 통해, 메모리 공간에서 정렬을 하는 방법
 
 ### [[index]] 이용
 
@@ -19,6 +19,10 @@
 - 단점
 	- 정렬 작업이 쿼리 실행 시 실행, 레코드 건수가 많아질수록 쿼리의 응답 속도가 느림
 
+
+
+---
 ## Reference
  -  [Real MySQL 8.0 (1권)](https://product.kyobobook.co.kr/detail/S000001766482)
 	- 9.2.3 ORDER BY 처리(Using filesort)
+	- 9.2.3.3 정렬 처리 방법
