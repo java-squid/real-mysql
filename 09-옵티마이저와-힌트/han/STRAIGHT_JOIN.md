@@ -5,10 +5,10 @@
 		- 인덱스를 사용할 수 있는 `WHERE` 조건까지 포함해서 그 조건을 만족하는 [[record]] 건수를 의미한다.
 	- 그런데 [[STRAIGHT_JOIN]] 을 이용할 경우, 조인의 순서를 결정할 수 있다.
 - 이와 비슷한 역할을 하는 [[optimizer-hint]] 는 다음과 같다.
-	- `JOIN_FIXED_ORDER`
-	- `JOIN_ORDER`
-	- `JOIN_PREFIX`
-	- `JOIN_SUFFIX`
+	- [[JOIN_FIXED_ORDER]]
+	- [[JOIN_ORDER]]
+	- [[JOIN_PREFIX]]
+	- [[JOIN_SUFFIX]]
 
 ---
 ## Reference

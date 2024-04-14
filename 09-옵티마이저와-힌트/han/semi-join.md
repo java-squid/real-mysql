@@ -18,7 +18,19 @@ WHERE e.emp_no IN (SELECT de.emp_no FROM dept_emp de WHERE de.from_date='1995-01
 - [[materialization]]
 - [[duplicated-weed-out]]
 
+
+> 세미 조인 힌트 (materialization 힌트 주기)
+
+```sql
+
+EXPLAIN
+SELECT *
+FROM deparments d
+WHERE d.dept_no IN (SELECT /*+ SEMIJOIN(MATERIAIZATION) */ de.dept_no FROM dept_emp de);
+```
+
 ---
 ## Reference
  -  [Real MySQL 8.0 (1권)](https://product.kyobobook.co.kr/detail/S000001766482)
 	- 9.3.1.9 세미조인
+	- 9.4.2.4 SEMIJOIN & NO_SEMIJOIN
