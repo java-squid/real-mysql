@@ -1,4 +1,4 @@
-- [[primary-key]] 를 제외한 모든 [[index]]
+- [[primary-key]] 를 제외한 모든 [[08-인덱스/han/index|index]]
 - 그 예로는 [[unique-index]] 가 있다.
 
 ---

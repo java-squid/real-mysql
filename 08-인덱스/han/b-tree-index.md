@@ -1,6 +1,6 @@
-- [B-tree](https://ko.wikipedia.org/wiki/B_%ED%8A%B8%EB%A6%AC) 를 기반으로 만들어진 [[index]]
+- [B-tree](https://ko.wikipedia.org/wiki/B_%ED%8A%B8%EB%A6%AC) 를 기반으로 만들어진 [[08-인덱스/han/index|index]]
 	- B(Balanced)
-- 가장 일반적으로 사용되는 [[index]] 이다.
+- 가장 일반적으로 사용되는 [[08-인덱스/han/index|index]] 이다.
 - 칼럼 값을 변형하지 않고, 원래의 값을 이용해 인덱싱하는 알고리즘
 
 > B-tree 인덱스 구조
