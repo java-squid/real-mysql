@@ -11,7 +11,7 @@
 > [[optimizer-hint]]
 
 - `SKIP_SCAN`
-	- 인덱스의 선행 칼럼에 대한 조건이 없어도, [[optimizer]] 가 해당 [[index]] 를 사용할 수 있도록 함
+	- 인덱스의 선행 칼럼에 대한 조건이 없어도, [[optimizer]] 가 해당 [[08-인덱스/han/index|index]] 를 사용할 수 있도록 함
 - `NO_SKIP_SCAN`
 	- [[skip-scan]] 을 사용하지 않도록 하는 옵션
 

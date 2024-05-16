@@ -1,12 +1,12 @@
 - 쿼리에 `ORDER BY` 가 사용되면 아래 3가지 방법 중 하나로 처리됨
-	1. [[index]] 를 이용한 정렬
+	1. [[08-인덱스/han/index|index]] 를 이용한 정렬
 		- 실행 계획 (Extra) 에 별도 표기 없음.
 	2. 조인에서 드라이빙 테이블만 정렬
 		- 실행 계획 (Extra) 에 `Using filesort` 표기됨
 	3. 조인에서 조인 결과를 임시 테이블로 저장 후 정렬
 		- 실행 계획 (Extra) 에 `Using temporary; Using filesort` 표기됨 
 
-> [[index]] 를 이용한 정렬
+> [[08-인덱스/han/index|index]] 를 이용한 정렬
 
 - `ORDER BY`의 순서대로 생성된 인덱스가 있어야함
 - [[b-tree]]가 아닌 [[hash-index]] 나 [[full-text-search-index]] 의 경우 위 정렬 이용 불가
